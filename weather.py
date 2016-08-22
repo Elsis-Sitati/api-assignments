@@ -16,12 +16,12 @@ def get_weather_details(cities):
         temp_list = []
         response = weather_finder(city)
         temp_list.append(response['main']['temp'])
-        temp_list.append(response['weather'][0]['description']) #description        
+        temp_list.append(response['weather'][0]['description'])       
         weather_details[city] = temp_list
     return weather_details
 
 details = get_weather_details(['Nairobi','Kampala','London'])
-#print the details
+
 print '{:10s} {:10s}  {:20s}'.format('City', 'Temperature', 'Description ')
 print '='*40
 for key in details:
